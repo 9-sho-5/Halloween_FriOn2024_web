@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(180deg, rgba(109, 43, 110, 1), rgba(229, 156, 69, 1));
+    background-repeat: no-repeat;
+    height: 2000px;
+}
+
+.firstview-contents{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.moon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo{
+    position: absolute;
+    width: 440px;
+    height: 440px; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    text-align: center;
+}
+
+.koumori-top{
+    position: absolute;
+    left: 20%;
+    top: 80px;
+    animation: koumoritop_move 8s ease-in-out infinite;
+
+}
+
+@keyframes koumoritop_move{
+	0%{
+		top: 80px;
+        left: 20%;
+	}
+    50%{
+		top: 120px;
+        left: 22%;       
+    }
+	100%{
+		top: 80px;
+        left: 20%;
+	}
+}
+
+.koumori-bottom{
+    position: absolute;
+    left: 65%;
+    top: 700px;
+    animation: koumoribottom_move 8s ease-in-out infinite;
+}
+
+@keyframes koumoribottom_move{
+	0%{
+		top: 700px;
+        left: 70%;
+	}
+    50%{
+		top: 550px;
+        left: 73%;       
+    }
+	100%{
+		top: 700px;
+        left: 70%;
+	}
+}
+
+.scrolldown1{
+	position:absolute;
+	left:50%;
+	top: 730px;
+	height:100px;
+}
+
+.scrolldown1 span{
+	position: absolute;
+	left:-15px;
+	top: -15px;
+	color: #eee;
+}
+
+.scrolldown1::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 2px;
+	height: 200px;
+	background: #000;
+	animation: path_move 3s ease-in-out;
+	opacity:1;
+}
+
+
+@keyframes path_move{
+	0%{
+		height:0;
+		top:0;
+		opacity: 1;
+	}
+	100%{
+		height:200px;
+		top:0px;
+		opacity: 1;
+	}
+}
+
+.spider{
+    position: absolute;
+    left: 50%;
+    top: 850px;
+    transform: translateX(-50%);
+    animation: spider_move 3s ease-in-out;
+}
+
+@keyframes spider_move{
+    0%{
+		top: 650px;
+	}
+	100%{
+		top: 850px;
+	}
+}

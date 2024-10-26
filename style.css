@@ -134,6 +134,13 @@ body{
 	}
 }
 
+/* ここからアポロ担当セクション */
+.contents{
+    height: 600px;
+}
+
+
+/* ここからバーチャル背景受け取りページ */
 .reward{
     width: 75%;
     margin: 0 auto;

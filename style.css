@@ -7,7 +7,6 @@
 body{
     background: linear-gradient(180deg, rgba(109, 43, 110, 1), rgba(229, 156, 69, 1));
     background-repeat: no-repeat;
-    height: 2000px;
 }
 
 .firstview-contents{
@@ -133,4 +132,56 @@ body{
 	100%{
 		top: 850px;
 	}
+}
+
+.reward{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.virtual-bg{
+    width: 1000px;
+    height: 600px;
+    background: #B3B3B3;
+    margin: 0 auto;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    margin: 60px 0px 90px;
+}
+
+.btn-download{
+    background: #E59C45;
+    box-shadow: 10px 10px 25px #424141;
+    padding: 20px 95px;
+    border-radius: 45px;
+    font-family: "";
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 800;
+    color: #EAEFED;
+    text-decoration: none;
+    transition : all 0.5s;
+}
+
+.btn-close{
+    background: #7356A7;
+    box-shadow: 10px 10px 25px #424141;
+    padding: 20px 75px;
+    border-radius: 45px;
+    font-family: "";
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 800;
+    color: #EAEFED;
+    text-decoration: none;
+    transition : all 0.5s;
+}
+
+.reward a:hover{
+    box-shadow: none;
 }

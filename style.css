@@ -1,194 +1,426 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(180deg, rgba(109, 43, 110, 1), rgba(229, 156, 69, 1));
-    background-repeat: no-repeat;
+@font-face {
+  font-family: "ZombieFont";
+  src: url("textfiles/Zombie-Brain.ttf");
 }
 
-.firstview-contents{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+@font-face {
+  font-family: "InterFont";
+  src: url("textfiles/Inter/static/Inter_18pt-ExtraBold.ttf");
 }
 
-.moon{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+body {
+  background-image: linear-gradient(#6e2c6f, #da914a);
+  background-repeat: no-repeat;
+  font-family: "InterFont";
 }
 
-.logo{
-    position: absolute;
-    width: 440px;
-    height: 440px; 
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: gray;
-    text-align: center;
+.firstview-contents {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
-.koumori-top{
-    position: absolute;
-    left: 20%;
+.moon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+  text-align: center;
+}
+
+.koumori-top {
+  position: absolute;
+  left: 20%;
+  top: 80px;
+  animation: koumoritop_move 8s ease-in-out infinite;
+}
+
+@keyframes koumoritop_move {
+  0% {
     top: 80px;
-    animation: koumoritop_move 8s ease-in-out infinite;
-
+    left: 20%;
+  }
+  50% {
+    top: 120px;
+    left: 22%;
+  }
+  100% {
+    top: 80px;
+    left: 20%;
+  }
 }
 
-@keyframes koumoritop_move{
-	0%{
-		top: 80px;
-        left: 20%;
-	}
-    50%{
-		top: 120px;
-        left: 22%;       
-    }
-	100%{
-		top: 80px;
-        left: 20%;
-	}
+.koumori-bottom {
+  position: absolute;
+  left: 65%;
+  top: 700px;
+  animation: koumoribottom_move 8s ease-in-out infinite;
 }
 
-.koumori-bottom{
-    position: absolute;
-    left: 65%;
+@keyframes koumoribottom_move {
+  0% {
     top: 700px;
-    animation: koumoribottom_move 8s ease-in-out infinite;
+    left: 70%;
+  }
+  50% {
+    top: 550px;
+    left: 73%;
+  }
+  100% {
+    top: 700px;
+    left: 70%;
+  }
 }
 
-@keyframes koumoribottom_move{
-	0%{
-		top: 700px;
-        left: 70%;
-	}
-    50%{
-		top: 550px;
-        left: 73%;       
-    }
-	100%{
-		top: 700px;
-        left: 70%;
-	}
+.scrolldown1 {
+  position: absolute;
+  left: 50%;
+  top: 730px;
+  height: 100px;
 }
 
-.scrolldown1{
-	position:absolute;
-	left:50%;
-	top: 730px;
-	height:100px;
+.scrolldown1 span {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  color: #eee;
 }
 
-.scrolldown1 span{
-	position: absolute;
-	left:-15px;
-	top: -15px;
-	color: #eee;
+.scrolldown1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 200px;
+  background: #000;
+  animation: path_move 3s ease-in-out;
+  opacity: 1;
 }
 
-.scrolldown1::after{
-	content: "";
-	position: absolute;
-	top: 0;
-	width: 2px;
-	height: 200px;
-	background: #000;
-	animation: path_move 3s ease-in-out;
-	opacity:1;
+@keyframes path_move {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    height: 200px;
+    top: 0px;
+    opacity: 1;
+  }
 }
 
-
-@keyframes path_move{
-	0%{
-		height:0;
-		top:0;
-		opacity: 1;
-	}
-	100%{
-		height:200px;
-		top:0px;
-		opacity: 1;
-	}
+.spider {
+  position: absolute;
+  left: 50%;
+  top: 850px;
+  transform: translateX(-50%);
+  animation: spider_move 3s ease-in-out;
 }
 
-.spider{
-    position: absolute;
-    left: 50%;
+@keyframes spider_move {
+  0% {
+    top: 650px;
+  }
+  100% {
     top: 850px;
-    transform: translateX(-50%);
-    animation: spider_move 3s ease-in-out;
+  }
 }
-
-@keyframes spider_move{
-    0%{
-		top: 650px;
-	}
-	100%{
-		top: 850px;
-	}
-}
-
-/* ここからアポロ担当セクション */
-.contents{
-    height: 600px;
-}
-
 
 /* ここからバーチャル背景受け取りページ */
-.reward{
-    width: 75%;
-    margin: 0 auto;
-    padding-top: 80px;
+.reward {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 80px;
 }
 
-.virtual-bg{
-    width: 1000px;
-    height: 600px;
-    background: #B3B3B3;
-    margin: 0 auto;
+.virtual-bg {
+  width: 1000px;
+  height: 600px;
+  background: #b3b3b3;
+  margin: 0 auto;
 }
 
-.buttons{
-    display: flex;
-    justify-content: center;
-    gap: 8%;
-    margin: 60px 0px 90px;
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+  margin: 60px 0px 90px;
 }
 
-.btn-download{
-    background: #E59C45;
-    box-shadow: 10px 10px 25px #424141;
-    padding: 20px 95px;
-    border-radius: 45px;
-    font-family: "";
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 800;
-    color: #EAEFED;
-    text-decoration: none;
-    transition : all 0.5s;
+.btn-download {
+  background: #e59c45;
+  box-shadow: 10px 10px 25px #424141;
+  padding: 20px 95px;
+  border-radius: 45px;
+  font-family: "";
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #eaefed;
+  text-decoration: none;
+  transition: all 0.5s;
 }
 
-.btn-close{
-    background: #7356A7;
-    box-shadow: 10px 10px 25px #424141;
-    padding: 20px 75px;
-    border-radius: 45px;
-    font-family: "";
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 800;
-    color: #EAEFED;
-    text-decoration: none;
-    transition : all 0.5s;
+.btn-close {
+  background: #7356a7;
+  box-shadow: 10px 10px 25px #424141;
+  padding: 20px 75px;
+  border-radius: 45px;
+  font-family: "";
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #eaefed;
+  text-decoration: none;
+  transition: all 0.5s;
 }
 
-.reward a:hover{
-    box-shadow: none;
+.reward a:hover {
+  box-shadow: none;
+}
+
+/* 以上バーチャル背景受け取りページ */
+
+/* アポロセクション */
+.play-game {
+  margin-top: 300px;
+  display: flex;
+  column-gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-game iframe {
+  background-color: grey;
+  aspect-ratio: 9/16;
+  border-radius: 10%;
+  width: 400px;
+}
+
+.container-game .ranking-leaderboard {
+  background-color: #6d2b6e;
+  width: 290px;
+  height: 415px;
+  border-radius: 10%;
+}
+
+.ranking-leaderboard .ranking {
+  background-color: white;
+  height: 80px;
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.ranking-leaderboard h2 {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  color: #e59c45;
+  text-align: center;
+  font-size: 30px;
+  font-family: "ZombieFont";
+}
+
+.ranking-leaderboard .ranking img {
+  height: 34px;
+  width: 37px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  margin-left: 5px;
+}
+
+.ranking {
+  display: flex;
+}
+
+.ranking p {
+  font-size: 30px;
+  margin-top: 23px;
+  margin-left: 14px;
+}
+
+.container-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-game img {
+  height: 200px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+button {
+  font-family: "InterFont";
+}
+
+.dropdown {
+  margin-top: 20px;
+  position: relative;
+}
+
+.dropdown button {
+  width: 290px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  background-color: #6d2b6e;
+}
+
+.button-text {
+  font-size: 16px;
+  margin-left: 50px;
+  color: #e59c45;
+}
+
+.dropdown button.active .button-text {
+  color: #f8e764;
+}
+
+.button-image {
+  width: 16px;
+  height: 10px;
+  margin-left: auto;
+  background-image: url("images/down-arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dropdown button.active .button-image {
+  background-image: url("images/up-arrow.png");
+}
+
+.dropdown img {
+  width: 20px;
+  height: 10px;
+  margin: 0px;
+  margin-left: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 290px;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: #e59c45;
+  padding-left: 90px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-decoration: none;
+  display: block;
+  background-color: #424141;
+  border: 1px solid #f8e764; /* Set a solid border */
+}
+
+.dropdown-content a:hover {
+  background-color: #f8e764;
+}
+
+.dropdown-content.show {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-display {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.teams {
+  margin-top: 70px;
+  margin-bottom: 300px;
+}
+
+.team-display h2 {
+  color: #6d2b6e;
+}
+
+.progress-container {
+  width: 1000px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.team-container {
+  margin-top: 50px;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.progress p {
+  margin-top: 24px;
+  color: #f1f1f1;
+  font-size: large;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #f8e764;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  line-height: 30px;
+  transition: width 2s ease;
+}
+
+footer img {
+  width: 100%;
+  display: block;
+  margin-bottom: 0px;
+  vertical-align: bottom;
+}
+
+footer {
+  margin: 0px;
+  padding: 0px;
 }

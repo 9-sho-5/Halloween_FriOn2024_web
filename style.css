@@ -256,6 +256,9 @@ body {
   font-size: 30px;
   margin-top: 23px;
   margin-left: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .container-game {
@@ -417,7 +420,6 @@ footer img {
   width: 100%;
   display: block;
   margin-bottom: 0px;
-  vertical-align: bottom;
 }
 
 footer {

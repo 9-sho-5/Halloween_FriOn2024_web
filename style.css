@@ -332,7 +332,7 @@ button {
   border-radius: 4px;
 }
 
-.dropdown-content a {
+.dropdown-content span {
   color: #e59c45;
   padding-left: 90px;
   padding-top: 14px;
@@ -341,9 +341,10 @@ button {
   display: block;
   background-color: #424141;
   border: 1px solid #f8e764; /* Set a solid border */
+  cursor: pointer;
 }
 
-.dropdown-content a:hover {
+.dropdown-content span:hover {
   background-color: #f8e764;
 }
 

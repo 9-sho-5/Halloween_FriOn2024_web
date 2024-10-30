@@ -6,25 +6,31 @@ function toggleDropdown() {
   dropdownButton.classList.toggle("active");
 }
 
-window.onclick = function(event) {
-  if (!event.target.closest('.dropdown')) {
+function selectTeam(teamName) {
+  const dropdownButtonText = document.querySelector(".dropdown .button-text");
+  dropdownButtonText.textContent = teamName; // 選択したチーム名に変更
+  toggleDropdown(); // ドロップダウンを閉じる
+}
+
+window.onclick = function (event) {
+  if (!event.target.closest(".dropdown")) {
     const dropdowns = document.getElementsByClassName("dropdown-content");
     const dropdownButton = document.querySelector(".dropdown button");
 
     for (let i = 0; i < dropdowns.length; i++) {
       const openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
         dropdownButton.classList.remove("active");
       }
     }
   }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const progressBars = document.querySelectorAll(".progress-bar");
-  progressBars.forEach(bar => {
+  progressBars.forEach((bar) => {
     const targetPercentage = parseInt(bar.getAttribute("data-target"));
-    bar.style.width = targetPercentage + "%"; 
+    bar.style.width = targetPercentage + "%";
   });
 });

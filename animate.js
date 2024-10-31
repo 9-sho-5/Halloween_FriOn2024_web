@@ -30,11 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const imageArray = [
-  "images/koumori_1.png",
-  "images/koumori_1.png",
-  "images/koumori_1.png",
-  "images/koumori_1.png",
-  "images/koumori_1.png",
+  "images/ad/anpi.png",
+  "images/ad/aporo.png",
+  "images/ad/contena.png",
+  "images/ad/kota.png",
+  "images/ad/marbo.png",
+  "images/ad/niltushi.png",
+  "images/ad/nitorin.png",
+  "images/ad/riltuchi.png"
 ];
 
 function createPopup() {
@@ -60,7 +63,7 @@ function createPopup() {
   popupContainer.appendChild(popup);
 
   const popupWidth = 300;
-  const popupHeight = 200;
+  const popupHeight = 500;
 
   popup.style.top = Math.random() * (window.innerHeight - popupHeight) + "px";
   popup.style.left = Math.random() * (window.innerWidth - popupWidth) + "px";
@@ -68,7 +71,7 @@ function createPopup() {
   popup.style.display = "block";
 
   closeButton.addEventListener("click", () => {
-    if (Math.random() < 0.5) {
+    if (Math.random() < 0.2) {
       showJumpScare();
     }
     popupContainer.removeChild(popup);
@@ -81,11 +84,11 @@ function showJumpScare() {
 
   setTimeout(() => {
     jumpScareOverlay.style.display = "none";
-  }, 3000);
+  }, 2000);
 }
 
 window.addEventListener("load", () => {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 8; i++) {
     createPopup();
   }
 });

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const imageArray = [
+const popupImages = [
   "images/ad/anpi.png",
   "images/ad/aporo.png",
   "images/ad/contena.png",
@@ -40,9 +40,15 @@ const imageArray = [
   "images/ad/riltuchi.png",
 ];
 
+const jumpScareImages = [
+  "images/scare/scare1.jpeg",
+  "images/scare/scare2.jpeg",
+  "images/scare/scare3.jpeg",
+  "images/scare/scare4.jpeg",
+];
+
 function createPopup() {
   const popupContainer = document.getElementById("popupContainer");
-
   const popup = document.createElement("div");
   popup.className = "popup";
 
@@ -50,11 +56,10 @@ function createPopup() {
   closeButton.className = "close-button";
   closeButton.innerHTML = "✕";
 
-  const randomIndex = Math.floor(Math.random() * imageArray.length);
-  const imgSrc = imageArray[randomIndex];
-
+  const randomPopupImage =
+    popupImages[Math.floor(Math.random() * popupImages.length)];
   const img = document.createElement("img");
-  img.src = imgSrc;
+  img.src = randomPopupImage;
   img.alt = "Popup Image";
 
   popup.appendChild(closeButton);
@@ -63,7 +68,7 @@ function createPopup() {
   popupContainer.appendChild(popup);
 
   const popupWidth = 300;
-  const popupHeight = 500;
+  const popupHeight = 250;
 
   popup.style.top = Math.random() * (window.innerHeight - popupHeight) + "px";
   popup.style.left = Math.random() * (window.innerWidth - popupWidth) + "px";
@@ -71,7 +76,7 @@ function createPopup() {
   popup.style.display = "block";
 
   closeButton.addEventListener("click", () => {
-    if (Math.random() < 0.2) {
+    if (Math.random() < 0.3) {
       showJumpScare();
     }
     popupContainer.removeChild(popup);
@@ -80,11 +85,17 @@ function createPopup() {
 
 function showJumpScare() {
   const jumpScareOverlay = document.getElementById("jumpScare");
+  const jumpScareImageElement = document.getElementById("jumpScareImage");
+
+  const randomJumpScareImage =
+    jumpScareImages[Math.floor(Math.random() * jumpScareImages.length)];
+  jumpScareImageElement.src = randomJumpScareImage;
+
   jumpScareOverlay.style.display = "flex";
 
   setTimeout(() => {
     jumpScareOverlay.style.display = "none";
-  }, 2000);
+  }, 1000);
 }
 
 window.addEventListener("load", () => {

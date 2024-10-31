@@ -37,7 +37,7 @@ const imageArray = [
   "images/ad/marbo.png",
   "images/ad/niltushi.png",
   "images/ad/nitorin.png",
-  "images/ad/riltuchi.png"
+  "images/ad/riltuchi.png",
 ];
 
 function createPopup() {

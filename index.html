@@ -1,233 +1,227 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="animate.js"></script>
     <title>ゴーストリート</title>
-</head>
-<body>
-
-
-    
-
+  </head>
+  <body>
     <section class="firstview">
-        <div class="firstview-contents">
-            <img src="./images/moon.png" alt="" width="756" class="moon">
-            <div class="logo">logo</div>
-            <img src="./images/koumori_1.png" alt="" class="koumori-top">
-            <img src="./images/koumori_2.png" alt="" class="koumori-bottom">
-            <div class="scrolldown1"><span></span></div>
-            <img src="./images/spider.png" alt="" class="spider">
-        </div>
+      <div class="firstview-contents">
+        <img src="./images/moon.png" alt="" width="756" class="moon" />
+        <div class="logo">logo</div>
+        <img src="./images/koumori_1.png" alt="" class="koumori-top" />
+        <img src="./images/koumori_2.png" alt="" class="koumori-bottom" />
+        <div class="scrolldown1"><span></span></div>
+        <img src="./images/spider.png" alt="" class="spider" />
+      </div>
     </section>
     <section class="play-game">
-        <iframe src="" frameborder="0">ゲーム画面</iframe>
-        <div class="container-game">
-            <div class="ranking-leaderboard">
-                <h2>Ranking</h2>
-                <div class="ranking">
-                    <img src="images/paw-1.png" alt="">
-                    <p>First</p>
-                </div>
-                <div class="ranking">
-                    <img src="images/paw-2.png" alt="">
-                    <p>Second</p>
-                </div>
-                <div class="ranking">
-                    <img src="images/paw-3.png" alt="">
-                    <p>Third</p>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button onclick="toggleDropdown()">
-                    <span class="button-text">チーム選択</span>
-                    <span class="button-image"></span>
-                </button>
-                <div id="dropdownMenu" class="dropdown-content">
-                  <a href="">A班</a>
-                  <a href="">B班</a>
-                  <a href="">C班</a>
-                  <a href="">D班</a>
-                  <a href="">E班</a>
-                  <a href="">F班</a>
-                  <a href="">G班</a>
-                  <a href="">H班</a>
-                  <a href="">I班</a>
-                  <a href="">J班</a>
-                  <a href="">K班</a>
-                  <a href="">L班</a>
-                  <a href="">M班</a>
-                  <a href="">N班</a>
-                  <a href="">O班</a>
-                  <a href="">P班</a>
-                </div>
-            </div>
-            <a href="reward.html">
-                <img src="images/pumpkin-face.png" alt="">
-            </a>
+      <iframe src="" frameborder="0">ゲーム画面</iframe>
+      <div class="container-game">
+        <div class="ranking-leaderboard">
+          <h2>Ranking</h2>
+          <div class="ranking">
+            <img src="images/paw-1.png" alt="" />
+            <p>First</p>
+          </div>
+          <div class="ranking">
+            <img src="images/paw-2.png" alt="" />
+            <p>Second</p>
+          </div>
+          <div class="ranking">
+            <img src="images/paw-3.png" alt="" />
+            <p>Third</p>
+          </div>
         </div>
+        <div class="dropdown">
+          <button onclick="toggleDropdown()">
+            <span class="button-text">チーム選択</span>
+            <span class="button-image"></span>
+          </button>
+          <div id="dropdownMenu" class="dropdown-content">
+            <a href="">A班</a>
+            <a href="">B班</a>
+            <a href="">C班</a>
+            <a href="">D班</a>
+            <a href="">E班</a>
+            <a href="">F班</a>
+            <a href="">G班</a>
+            <a href="">H班</a>
+            <a href="">I班</a>
+            <a href="">J班</a>
+            <a href="">K班</a>
+            <a href="">L班</a>
+            <a href="">M班</a>
+            <a href="">N班</a>
+            <a href="">O班</a>
+            <a href="">P班</a>
+          </div>
+        </div>
+        <a href="reward.html">
+          <img src="images/pumpkin-face.png" alt="" />
+        </a>
+      </div>
     </section>
 
     <section class="team-display">
-        <div class="teams">
-            <div class="team-container">
-                <h2>A班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
+      <div class="teams">
+        <div class="team-container">
+          <h2>A班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
             </div>
-            <div class="team-container">
-                <h2>B班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>C班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>D班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>E班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>F班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>G班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>H班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>I班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>J班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>K班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>L班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>M班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>N班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>O班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
-            <div class="team-container">
-                <h2>P班</h2>
-                <div class="progress">
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="70"></div>
-                    </div>
-                    <p>XXXm</p>
-                </div>
-            </div>
+            <p>XXXm</p>
+          </div>
         </div>
+        <div class="team-container">
+          <h2>B班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>C班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>D班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>E班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>F班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>G班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>H班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>I班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>J班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>K班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>L班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>M班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>N班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>O班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+        <div class="team-container">
+          <h2>P班</h2>
+          <div class="progress">
+            <div class="progress-container">
+              <div class="progress-bar" data-target="70"></div>
+            </div>
+            <p>XXXm</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div id="popupContainer"></div>
 
     <div id="jumpScare" class="jump-scare">
-        <img src="images/jump-scare.jpg" alt="Jump Scare Image" />
+      <img src="images/jump-scare.jpg" alt="Jump Scare Image" />
     </div>
-
-
-</body>
-<footer>
-    <img src="images/footer-image.png" alt="">
-</footer>
+  </body>
+  <footer>
+    <img src="images/footer-image.png" alt="" />
+  </footer>
 </html>

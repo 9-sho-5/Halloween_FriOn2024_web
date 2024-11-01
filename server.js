@@ -4,23 +4,37 @@ const fetchData = () => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ key: "value" }), // 必要に応じてボディを設定
   })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      return response.json(); // JSON形式で返ってくる場合はこちら
+      return response.json();
     })
     .then((data) => {
       console.log("Fetched data:", data);
 
-      // Fetchが成功したら、progress-barを更新
       if (data.response_status === "ok") {
-        data.game_statuses.forEach((status) => {
-          // チームIDに基づいてチームの progress-bar 要素を取得
-          const teamContainers = document.querySelectorAll(".team-container");
+        // 距離が長い順にソートして上位3つを取得
+        const topThree = data.game_statuses
+          .sort((a, b) => b.distance - a.distance)
+          .slice(0, 3);
 
+        // ランキング要素を更新
+        const rankingElements = document.querySelectorAll(".ranking");
+        topThree.forEach((status, index) => {
+          const rankingElement = rankingElements[index];
+          const rankText = rankingElement.querySelector("p");
+          const teamImage = rankingElement.querySelector("img");
+
+          // チームの距離と名前を更新
+          rankText.textContent = `${status.team_id}班 - ${status.distance}m`;
+          teamImage.alt = `${status.team_id} rank image`; // 代替テキストを設定
+        });
+
+        // progress-barの更新
+        data.game_statuses.forEach((status) => {
+          const teamContainers = document.querySelectorAll(".team-container");
           teamContainers.forEach((container) => {
             const teamName = container.querySelector("h2").textContent;
             if (teamName.includes(`${status.team_id}班`)) {

@@ -41,10 +41,9 @@ const popupImages = [
 ];
 
 const jumpScareImages = [
-  "images/scare/scare1.jpeg",
-  "images/scare/scare2.jpeg",
-  "images/scare/scare3.jpeg",
-  "images/scare/scare4.jpeg",
+  "images/scare/Mummy.png",
+  "images/scare/Zombie.png",
+  "images/scare/Skeleton.png"
 ];
 
 function createPopup() {

@@ -208,7 +208,6 @@ body {
 }
 
 .play-game iframe {
-  background-color: grey;
   aspect-ratio: 9/16;
   border-radius: 10%;
   width: 400px;

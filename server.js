@@ -15,6 +15,13 @@ const fetchData = () => {
       console.log("Fetched data:", data);
 
       if (data.response_status === "ok") {
+        // 各チームのデータをローカルストレージに保存
+        const teamData = {};
+        data.game_statuses.forEach((status) => {
+          teamData[status.team_id] = status.distance;
+        });
+        localStorage.setItem("teamData", JSON.stringify(teamData));
+
         // 距離が長い順にソートして上位3つを取得
         const topThree = data.game_statuses
           .sort((a, b) => b.distance - a.distance)

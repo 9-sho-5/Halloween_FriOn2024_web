@@ -20,4 +20,37 @@
       </div>
     </section>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ローカルストレージから選択したチームとその距離データを取得
+      const selectedTeam = localStorage.getItem("selectedTeam");
+      const teamData = JSON.parse(localStorage.getItem("teamData")); // {"A":1031} のような形で保存
+
+      if (selectedTeam && teamData && teamData[selectedTeam] !== undefined) {
+        // teamDistance を数値として取得
+        const teamDistance = parseInt(teamData[selectedTeam], 10); // 数値に変換している
+
+        const videoElement = document.querySelector(".virtual-bg");
+        const downloadLink = document.querySelector(".btn-download");
+
+        // 距離に応じてビデオのソースを変更
+        if (teamDistance >= 1031) {
+          videoElement.src = "images/enemy_back/back03.mp4";
+          downloadLink.href = "images/enemy_back/back03.mp4";
+        } else if (teamDistance >= 686) {
+          videoElement.src = "images/enemy_back/back02.mp4";
+          downloadLink.href = "images/enemy_back/back02.mp4";
+        } else if (teamDistance >= 343) {
+          videoElement.src = "images/enemy_back/back01.mp4";
+          downloadLink.href = "images/enemy_back/back01.mp4";
+        } else {
+          // デフォルトのビデオソースを設定
+          videoElement.src = "images/enemy_back/back01.mp4";
+          downloadLink.href = "images/enemy_back/back01.mp4";
+        }
+      } else {
+        console.error("No team selected or data missing");
+      }
+    });
+  </script>
 </html>

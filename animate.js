@@ -10,6 +10,10 @@ function selectTeam(teamName) {
   const dropdownButtonText = document.querySelector(".dropdown .button-text");
   dropdownButtonText.textContent = teamName; // 選択したチーム名に変更
   toggleDropdown(); // ドロップダウンを閉じる
+
+  // "班" を削除したチーム名を保存
+  const teamId = teamName.replace("班", "");
+  localStorage.setItem("selectedTeam", teamId);
 }
 
 window.onclick = function (event) {

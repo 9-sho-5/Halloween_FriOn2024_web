@@ -1,5 +1,5 @@
 const fetchData = () => {
-  fetch("https://b59b-125-200-17-207.ngrok-free.app/fetch_game_status", {
+  fetch("https://e067-125-200-17-207.ngrok-free.app/fetch_game_status", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

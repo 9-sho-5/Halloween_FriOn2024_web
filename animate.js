@@ -6,6 +6,11 @@ function toggleDropdown() {
   dropdownButton.classList.toggle("active");
 }
 
+function selectOption(option) {
+  document.getElementById("buttonText").textContent = option;
+  toggleDropdown();
+}
+
 window.onclick = function (event) {
   if (!event.target.closest(".dropdown")) {
     const dropdowns = document.getElementsByClassName("dropdown-content");

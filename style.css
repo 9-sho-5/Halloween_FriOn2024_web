@@ -470,3 +470,15 @@ footer {
   height: 90%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 1024px) {
+  .team-display {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-game {
+    display: none;
+  }
+}

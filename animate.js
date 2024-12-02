@@ -109,6 +109,6 @@ function showJumpScare() {
 
 window.addEventListener("load", () => {
   for (let i = 0; i < 8; i++) {
-    createPopup();
+    // createPopup();
   }
 });

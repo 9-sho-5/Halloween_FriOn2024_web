@@ -71,4 +71,4 @@ const fetchData = () => {
 };
 
 // データを5秒ごとに取得
-setInterval(fetchData, 5000);
+// setInterval(fetchData, 5000);
